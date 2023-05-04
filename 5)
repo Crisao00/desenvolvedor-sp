@@ -1,0 +1,21 @@
+Segue abaixo um exemplo de programa em Python que inverte os caracteres de uma string sem usar a função reverse:
+
+# Definindo a string a ser invertida
+s = 'abcdef'
+
+# Convertendo a string para uma lista de caracteres
+lst = list(s)
+
+# Invertendo a lista de caracteres
+i = 0
+j = len(lst) - 1
+while i < j:
+    lst[i], lst[j] = lst[j], lst[i]
+    i += 1
+    j -= 1
+
+# Convertendo a lista de caracteres de volta para uma string
+s_invertida = ''.join(lst)
+
+# Imprimindo a string invertida
+print(s_invertida)
