@@ -1,0 +1,23 @@
+Segue abaixo um exemplo de programa em Python que calcula o menor valor de faturamento diário, o maior valor de faturamento diário e o número de 
+dias no mês em que o valor de faturamento diário foi superior à média mensal, a partir de um arquivo JSON com os valores de faturamento diário:
+
+import json
+
+# Lendo o arquivo JSON com os valores de faturamento diário
+with open('faturamento.json', 'r') as arquivo:
+    faturamento_diario = json.load(arquivo)
+
+# Calculando o menor e o maior valor de faturamento diário
+menor_faturamento = min(faturamento_diario)
+maior_faturamento = max(faturamento_diario)
+
+# Calculando a média mensal de faturamento diário (ignorando os dias sem faturamento)
+media_mensal = sum(faturamento_diario) / len(faturamento_diario)
+
+# Calculando o número de dias em que o faturamento diário foi superior à média mensal
+dias_acima_da_media = sum(1 for faturamento in faturamento_diario if faturamento > media_mensal)
+
+# Imprimindo os resultados
+print(f"Menor faturamento diário: R${menor_faturamento:.2f}")
+print(f"Maior faturamento diário: R${maior_faturamento:.2f}")
+print(f"Número de dias com faturamento acima da média mensal: {dias_acima_da_media}")
