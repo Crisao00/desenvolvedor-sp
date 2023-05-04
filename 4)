@@ -1,0 +1,20 @@
+Segue abaixo um exemplo de programa em Python que calcula o percentual de representação de cada estado no faturamento total mensal da distribuidora:
+
+# Dicionário com o faturamento mensal por estado
+faturamento_mensal = {
+    'SP': 67836.43,
+    'RJ': 36678.66,
+    'MG': 29229.88,
+    'ES': 27165.48,
+    'Outros': 19849.53
+}
+
+# Calculando o faturamento total mensal da distribuidora
+faturamento_total = sum(faturamento_mensal.values())
+
+# Calculando o percentual de representação de cada estado no faturamento total mensal da distribuidora
+percentuais = {estado: faturamento / faturamento_total * 100 for estado, faturamento in faturamento_mensal.items()}
+
+# Imprimindo os resultados
+for estado, percentual in percentuais.items():
+    print(f"{estado}: {percentual:.2f}%")
