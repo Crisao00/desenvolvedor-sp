@@ -1,0 +1,11 @@
+O trecho de código apresentado é uma implementação de um laço de repetição que incrementa a variável K de 1 em 1 e adiciona o valor atual de K à variável SOMA 
+em cada iteração. O laço é executado enquanto K for menor que o valor da variável INDICE, que foi definida como 13 no início do programa.
+
+Logo, o laço será executado 13 vezes (para K = 1, 2, 3, ..., 13), e a variável SOMA será atualizada da seguinte forma:
+
+Na primeira iteração, K é incrementado para 1 e SOMA recebe 1.
+Na segunda iteração, K é incrementado para 2 e SOMA recebe 3 (1 + 2).
+Na terceira iteração, K é incrementado para 3 e SOMA recebe 6 (1 + 2 + 3).
+E assim por diante, até a 13ª iteração, em que K é incrementado para 13 e SOMA recebe 91 (1 + 2 + 3 + ... + 13).
+
+Portanto, ao final do processamento, o valor da variável SOMA será 91.
