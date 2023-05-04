@@ -1,0 +1,19 @@
+Segue abaixo um exemplo em pyton que  que calcula a sequência e verifica se um número informado pelo usuário pertence à sequência:
+
+# Pedindo um número ao usuário
+numero = int(input("Digite um número para verificar se ele pertence à sequência de Fibonacci: "))
+
+# Inicializando a sequência com os valores iniciais
+fibonacci = [0, 1]
+
+# Calculando os próximos valores da sequência até que o último seja maior ou igual ao número informado
+while fibonacci[-1] < numero:
+    proximo = fibonacci[-1] + fibonacci[-2]
+    fibonacci.append(proximo)
+
+# Verificando se o número informado pertence à sequência
+if numero in fibonacci:
+    print(f"O número {numero} pertence à sequência de Fibonacci.")
+else:
+    print(f"O número {numero} não pertence à sequência de Fibonacci.")
+
